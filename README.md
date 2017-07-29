@@ -1,6 +1,6 @@
 # Tutorials
 This repository contains a collection of tutorials that help speed up software development.
-I'll try to occassionaly update the tutorials, so they remain up-to-date.
+I'll try to occassionaly update the tutorials, so that they remain up-to-date.
 
 ## License
 MIT License
