@@ -1,6 +1,6 @@
 # Installing and updating Node.js and npm on a Raspberry Pi
-This tutorial describes how you can easily install and update Node.js on a Raspberry Pi.
-I'll be using the latest version of Raspbian, but the instructions will probably work just fine on other Linux distributions.
+This tutorial describes how to easily install and update Node.js and npm on a Raspberry Pi.
+I'll be using the latest version of Raspbian (Jessie at the time of writing), but the instructions will probably work just fine on other Linux distributions.
 
 ## Installing Node.js and npm
 First of all, we'll need to figure out the CPU architecture of the Raspberry Pi.
