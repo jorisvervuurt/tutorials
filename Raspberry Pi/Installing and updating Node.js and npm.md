@@ -38,9 +38,9 @@ We're now ready to install Node.js and npm. Type `sudo cp -R -f * /usr/local` an
 To cleanup your home folder, type `cd ..` and hit Return. Then type `rm -R -f` followed by the name of the archive, a whitespace and the extracted folder name and hit Return. This should look something like this: `rm -R -f node-v8.2.1-linux-armv6l.tar.xz node-v8.2.1-linux-armv6l`
 
 After running the above command, all installation files will be gone from your home folder.
-Node.js and npm should now be correctly installed and ready for use. Simply run `node -v` to see the version of the installed binary. Running `npm -v` should print the version of the installed `npm` binary.
+Node.js and npm should now be correctly installed and ready for use. Simply run `node -v` to see the version of the installed binary. Running `npm -v` should print the version of the installed npm binary.
 
 ## Updating Node.js and/or npm
-To update Node.js, simply follow the above instructions again. The old version will be overwritten, so it's probably best to run `sudo reboot now` after you've followed the above instructions. Note that the `npm` binary might be overwritten by a slightly older version, so it's probably best to also update `npm` using the instructions below.
+To update Node.js, simply follow the above instructions again. The old version will be overwritten, so it's probably best to run `sudo reboot now` after you've followed the above instructions. Note that the npm binary might be overwritten by a slightly older version, so it's probably best to also update npm using the instructions below.
 
-Updating `npm` is quite easy. Simply run `sudo npm install npm@latest -g` to install the latest version of npm. After running the command, type `npm -v` to see if the update went smoothly.
+Updating npm is quite easy. Simply run `sudo npm install npm@latest -g` to install the latest version of npm. After running the command, type `npm -v` to see if the update went smoothly.
