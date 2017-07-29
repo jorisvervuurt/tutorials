@@ -18,7 +18,7 @@ On your computer, go to the Download page on Node.js' website:
 https://nodejs.org/en/download/
 
 Click on the version you'd like to install (either 'LTS' or 'Current').
-On the right of 'Linux Binaries (ARM)', right-click on the CPU architecture that your Pi is running (e.g. 'ARMv6' if `lscpu` printed 'armv6l') and copy the link URL.
+On the right of 'Linux Binaries (ARM)', right-click on the CPU architecture that your Pi is running (e.g. 'ARMv6' if `lscpu` printed 'armv6l') and copy the target URL.
 
 On your Pi, change directory to your home folder using `cd ~`.
 Next, we'll use `wget` to download the Node.js binary. Simply type `wget` followed by the URL you copied and hit Return. This should look something like this:
@@ -29,7 +29,7 @@ Once the binary has been download, we'll untar it using the `tar` utility. Type 
 Once the archive has been extracted, we need to change directory into the extracted folder. Type `cd ` followed by the name of the archive without the `.tar.xz` extension and hit Return. This should look something like this: `cd node-v8.2.1-linux-armv6l`
 
 ### Step 2: installing the downloaded binary
-The downloaded binary is now almost ready to be installed. First, which is as simple as copying all files from the extracted folder to the `/usr/local/` folder. We'll do this using the `cp` utility. Super-user privileges are required, so we'll need to use `sudo`.
+The downloaded binary is now almost ready to be installed, which is as simple as copying all files from the extracted folder to the `/usr/local/` folder. We'll do this using the `cp` utility. Super-user privileges are required, so we'll need to use `sudo`.
 
 Before we start copying all files, we need to remove some static files that don't have to be copied to the `/usr/local` folder. Type `rm -f CHANGELOG.md LICENSE README.md` and hit Return to do this.
 
@@ -37,10 +37,10 @@ We're now ready to install Node.js and npm. Type `sudo cp -R -f * /usr/local` an
 
 To cleanup your home folder, type `cd ..` and hit Return. Then type `rm -R -f` followed by the name of the archive, a whitespace and the extracted folder name and hit Return. This should look something like this: `rm -R -f node-v8.2.1-linux-armv6l.tar.xz node-v8.2.1-linux-armv6l`
 
-All installation files are now removed from your home folder.
-Node.js and npm should now be correctly installed and ready for use. Simply run `node -v` to see the version of the installed binary. Running `npm -v` prints the version of the installed `npm` binary.
+After running the above command, all installation files will be gone from your home folder.
+Node.js and npm should now be correctly installed and ready for use. Simply run `node -v` to see the version of the installed binary. Running `npm -v` should print the version of the installed `npm` binary.
 
 ## Updating Node.js and/or npm
-To update Node.js, simply follow the above instructions again. The old version will be overwritten, so it's probably best to run `sudo reboot now` after you've followed the above instructions.
+To update Node.js, simply follow the above instructions again. The old version will be overwritten, so it's probably best to run `sudo reboot now` after you've followed the above instructions. Note that the `npm` binary might be overwritten by a slightly older version, so it's probably best to also update `npm` using the instructions below.
 
 Updating `npm` is quite easy. Simply run `sudo npm install npm@latest -g` to install the latest version of npm. After running the command, type `npm -v` to see if the update went smoothly.
