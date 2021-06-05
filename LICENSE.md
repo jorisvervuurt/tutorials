@@ -1,8 +1,3 @@
-# Tutorials
-This repository contains a collection of tutorials that help speed up software development.
-I'll try to occassionaly update the tutorials, so that they remain up-to-date.
-
-## License
 Copyright (c) 2017-2021 Joris Vervuurt Software
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
