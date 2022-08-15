@@ -1,6 +1,6 @@
 # Installing and updating Node.js and npm on a Raspberry Pi
 This tutorial describes how to easily install and update Node.js and npm on a Raspberry Pi.
-I'm using the latest version of Raspberry Pi OS Lite (release date May 7th 2021 at the time of writing) on a Raspberry Pi 3B+, but the instructions will probably work just fine on other Linux distributions.
+I'm using the latest version of Raspberry Pi OS Lite (release date April 4th 2022 at the time of writing) on a Raspberry Pi 3 Model B+, but the instructions will probably work just fine on other Linux distributions.
 
 ## Before continuing...
 This tutorial assumes that you only want to install a single version of Node.js and npm. If you want to run multiple versions at the same time, have a look at [`nvm`](https://github.com/nvm-sh/nvm#about).
