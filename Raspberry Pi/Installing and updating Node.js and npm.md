@@ -23,13 +23,16 @@ https://nodejs.org/en/download/
 Click on the version you'd like to install (either 'LTS' or 'Current').
 On the right of 'Linux Binaries (ARM)', right-click on the CPU architecture that your Pi is running (e.g. 'ARMv7' if `lscpu` printed 'armv7l') and copy the target URL.
 
+*Tip! Don't see the CPU architecture your Pi uses? You may be able to find it in the list of unofficial builds:
+https://unofficial-builds.nodejs.org/download/release/*
+
 On your Pi, change directory to your home folder using `cd ~`.
 Next, we'll use `wget` to download the Node.js binary. Simply type `wget` followed by the URL you copied and hit Return. This should look something like this:
-`wget https://nodejs.org/dist/v14.17.0/node-v14.17.0-linux-armv7l.tar.xz`
+`wget https://nodejs.org/dist/v16.16.0/node-v16.16.0-linux-armv7l.tar.xz`
 
-Once the binary has been download, we'll untar it using the `tar` utility. Type `tar -x -f` followed by the name of the archive and hit Return. This should look something like this: `tar -x -f node-v14.17.0-linux-armv7l.tar.xz`
+Once the binary has been download, we'll untar it using the `tar` utility. Type `tar -x -f` followed by the name of the archive and hit Return. This should look something like this: `tar -x -f node-v16.16.0-linux-armv7l.tar.xz`
 
-Once the archive has been extracted, we need to change directory into the extracted folder. Type `cd ` followed by the name of the archive without the `.tar.xz` extension and hit Return. This should look something like this: `cd node-v14.17.0-linux-armv7l`
+Once the archive has been extracted, we need to change directory into the extracted folder. Type `cd ` followed by the name of the archive without the `.tar.xz` extension and hit Return. This should look something like this: `cd node-v16.16.0-linux-armv7l`
 
 ### Step 2: installing the downloaded binary
 The downloaded binary is now almost ready to be installed, which is as simple as copying all files from the extracted folder to the `/usr/local/` folder. We'll do this using the `cp` utility. Super-user privileges are required, so we'll need to use `sudo`.
@@ -38,12 +41,12 @@ Before we start copying all files, we need to remove some static files that don'
 
 We're now ready to install Node.js and npm. Type `sudo cp -R -f * /usr/local` and hit Return. Once this is done, Node.js and npm should be ready for use!
 
-To cleanup your home folder, type `cd ..` and hit Return. Then type `rm -R -f` followed by the name of the archive, a whitespace and the extracted folder name and hit Return. This should look something like this: `rm -R -f node-v14.17.0-linux-armv7l.tar.xz node-v14.17.0-linux-armv7l`
+To cleanup your home folder, type `cd ..` and hit Return. Then type `rm -R -f` followed by the name of the archive, a whitespace and the extracted folder name and hit Return. This should look something like this: `rm -R -f node-v16.16.0-linux-armv7l.tar.xz node-v16.16.0-linux-armv7l`
 
 After running the above command, all installation files will be gone from your home folder.
 Node.js and npm should now be correctly installed and ready for use. Simply run `node -v` to see the version of the installed binary. Running `npm -v` should print the version of the installed npm binary.
 
 ## Updating Node.js and/or npm
-To update Node.js, simply follow the above instructions again. The old version will be overwritten. Note that the npm binary might be overwritten by a slightly older version, so if you want to you can update npm using the instructions below.
+To update Node.js, simply follow the above instructions again. The old version will be overwritten. Note that the `npm` binary might be overwritten by a slightly older version, so if you want to you can update `npm` using the instructions below.
 
-Updating npm is quite easy. Simply run `sudo npm install npm@latest -g` to install the latest version of npm. After running the command, type `npm -v` to see if the update went smoothly.
+Updating `npm` is quite easy. Simply run `sudo npm install npm@latest -g` to install the latest version of `npm`. After running the command, type `npm -v` to see if the update went smoothly.
