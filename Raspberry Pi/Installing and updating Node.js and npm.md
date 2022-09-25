@@ -1,6 +1,6 @@
 # Installing and updating Node.js and npm on a Raspberry Pi
 This tutorial describes how to easily install and update Node.js and npm on a Raspberry Pi.
-I'm using the latest version of Raspberry Pi OS Lite (release date April 4th 2022 at the time of writing) on a Raspberry Pi 4 Model B, but the instructions will probably work just fine on other Linux distributions.
+I'm using the latest version of Raspberry Pi OS Lite (release date September 6th 2022 at the time of writing) on a Raspberry Pi 4 Model B, but the instructions will probably work just fine on other Linux distributions.
 
 ## Before continuing...
 This tutorial assumes that you only want to install a single version of Node.js and npm. If you want to run multiple versions at the same time, have a look at [`nvm`](https://github.com/nvm-sh/nvm#about).
@@ -28,11 +28,11 @@ https://unofficial-builds.nodejs.org/download/release/*
 
 On your Pi, change directory to your home folder using `cd ~`.
 Next, we'll use `wget` to download the Node.js binary. Simply type `wget` followed by the URL you copied and hit Return. This should look something like this:
-`wget https://nodejs.org/dist/v16.17.0/node-v16.17.0-linux-arm64.tar.xz`
+`wget https://nodejs.org/dist/v16.17.1/node-v16.17.1-linux-arm64.tar.xz`
 
-Once the binary has been download, we'll untar it using the `tar` utility. Type `tar -x -f` followed by the name of the archive and hit Return. This should look something like this: `tar -x -f node-v16.17.0-linux-arm64.tar.xz`
+Once the binary has been download, we'll untar it using the `tar` utility. Type `tar -x -f` followed by the name of the archive and hit Return. This should look something like this: `tar -x -f node-v16.17.1-linux-arm64.tar.xz`
 
-Once the archive has been extracted, we need to change directory into the extracted folder. Type `cd ` followed by the name of the archive without the `.tar.xz` extension and hit Return. This should look something like this: `cd node-v16.17.0-linux-arm64`
+Once the archive has been extracted, we need to change directory into the extracted folder. Type `cd ` followed by the name of the archive without the `.tar.xz` extension and hit Return. This should look something like this: `cd node-v16.17.1-linux-arm64`
 
 ### Step 2: installing the downloaded binary
 The downloaded binary is now almost ready to be installed, which is as simple as copying all files from the extracted folder to the `/usr/local/` folder. We'll do this using the `cp` utility. Super-user privileges are required, so we'll need to use `sudo`.
@@ -41,7 +41,7 @@ Before we start copying all files, we need to remove some static files that don'
 
 We're now ready to install Node.js and npm. Type `sudo cp -R -f * /usr/local` and hit Return. Once this is done, Node.js and npm should be ready for use!
 
-To cleanup your home folder, type `cd ..` and hit Return. Then type `rm -R -f` followed by the name of the archive, a whitespace and the extracted folder name and hit Return. This should look something like this: `rm -R -f node-v16.17.0-linux-arm64.tar.xz node-v16.17.0-linux-arm64`
+To cleanup your home folder, type `cd ..` and hit Return. Then type `rm -R -f` followed by the name of the archive, a whitespace and the extracted folder name and hit Return. This should look something like this: `rm -R -f node-v16.17.1-linux-arm64.tar.xz node-v16.17.1-linux-arm64`
 
 After running the above command, all installation files will be gone from your home folder.
 Node.js and npm should now be correctly installed and ready for use. Simply run `node -v` to see the version of the installed binary. Running `npm -v` should print the version of the installed npm binary.
