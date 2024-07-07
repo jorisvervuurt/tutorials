@@ -1,3 +1,7 @@
+# IMPORTANT NOTICE
+This repository has moved to [GitLab](https://gitlab.joris-vervuurt.com/miscellaneous/tutorials).
+The GitHub repository been archived and will no longer be maintained.
+
 # Tutorials
 This repository contains a collection of tutorials that help speed up software development.
 I'll try to occassionaly update the tutorials, so that they remain up-to-date.
